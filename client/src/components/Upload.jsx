@@ -22,7 +22,7 @@ const Upload = (props) => {
   const [errorMsg, setErrorMsg] = useState('');
   const [isPreviewAvailable, setIsPreviewAvailable] = useState(false); // state to show preview only for images
   const dropRef = useRef(); // React ref for managing the hover state of droppable area
-  const API_URL = 'http://localhost:4000';
+  const API_URL = 'https://upload-file-server-tawny.vercel.app';
 
   const handleInputChange = (event) => {
     setState({
@@ -67,7 +67,7 @@ const Upload = (props) => {
           formData.append('description', description);
   
           setErrorMsg('');
-          await axios.post(`/${API_URL}/api/upload`, formData, {
+          await axios.post('/'+API_URL+'/api/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }

@@ -10,7 +10,7 @@ import {
   Td,
   TableCaption,
 } from '@chakra-ui/react'
-const API_URL = 'https://upload-file-server-tawny.vercel.app';
+const API_URL = 'https://upload-file-server2.vercel.app/';
 const FilesList = () => {
   const [filesList, setFilesList] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');

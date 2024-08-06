@@ -22,7 +22,7 @@ const Upload = (props) => {
   const [errorMsg, setErrorMsg] = useState('');
   const [isPreviewAvailable, setIsPreviewAvailable] = useState(false); // state to show preview only for images
   const dropRef = useRef(); // React ref for managing the hover state of droppable area
-  const API_URL = 'https://upload-file-server-tawny.vercel.app';
+  const API_URL = 'https://upload-file-server2.vercel.app/';
 
   const handleInputChange = (event) => {
     setState({

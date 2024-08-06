@@ -21,7 +21,7 @@ const FilesList = () => {
 
   const getFilesList = async () => {
     try {
-      const { data } = await axios.get('/'+API_URL+'/api/getAllFiles');
+      const { data } = await axios.get('/api/getAllFiles');
       setErrorMsg('');
       setFilesList(data);
     } catch (error) {
@@ -31,7 +31,7 @@ const FilesList = () => {
 
   const downloadFile = async (id, path, mimetype) => {
     try {
-      const result = await axios.get('/'+API_URL+`/api/download/${id}`,{
+      const result = await axios.get(`/api/download/${id}`,{
         responseType: 'blob'
       });
       const split = path.split('/');

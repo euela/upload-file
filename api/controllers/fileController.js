@@ -1,7 +1,6 @@
 import File from '../models/fileModel.js'
 import path from 'path'
-
-const __dirname = path.resolve();
+import { __dirname } from '../../index.js';
 
 export const allFileRequest =  async (req, res) => {
     try {
@@ -40,7 +39,7 @@ export const downloadRequest = async (req, res) => {
       res.set({
         'Content-Type': file.file_mimetype
       });
-      res.sendFile(path.join(__dirname, '..','upload',file.file_path));
+      res.sendFile(path.join(__dirname ,file.file_path));
     } catch (error) {
       res.status(400).send('Error while downloading file. Try again later.');
     }

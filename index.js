@@ -8,12 +8,18 @@ import cors from 'cors'
 config()
 configDb()
 
-const __dirname = path.resolve();
+export const __dirname = path.resolve();
+
 const app = express()
 app.options('*',cors())
-
+app.use(express.json())
 
 app.use(express.static(path.join(__dirname, '/client/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+})
+
 app.use('/api',fileRouter)
 app.listen(process.env.PORT,()=>{
     console.log(`server running on port : ${process.env.PORT}`)

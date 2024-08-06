@@ -67,7 +67,7 @@ const Upload = (props) => {
           formData.append('description', description);
   
           setErrorMsg('');
-          await axios.post('https://upload-file-server-five.vercel.app/api/upload', formData, {
+          await axios.post('/api/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }

@@ -1,6 +1,6 @@
 import File from '../models/fileModel.js'
 import path from 'path'
-import { __dirname } from '../../index.js';
+const __dirname = path.resolve();
 
 export const allFileRequest =  async (req, res) => {
     try {

@@ -8,7 +8,7 @@ import cors from 'cors'
 config()
 configDb()
 
-export const __dirname = path.resolve();
+
 
 const app = express()
 app.options('*',cors())

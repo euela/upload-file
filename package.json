@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "node": "node ./index.js",
-    "watch": "nodemon ./index.js"
+    "watch": "nodemon ./index.js",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
   "author": "",

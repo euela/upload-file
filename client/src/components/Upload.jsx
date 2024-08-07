@@ -67,7 +67,7 @@ const Upload = (props) => {
           formData.append('description', description);
   
           setErrorMsg('');
-          await axios.post('https://upload-file-2.onrender.com/api/upload', formData, {
+          await axios.post('https://upload-file-lad3.onrender.com/api/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }

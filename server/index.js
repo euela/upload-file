@@ -13,10 +13,10 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/api',fileRouter)
-app.use('/',async(req,res)=>{
-  res.json({message:'api working!'})
-})
+app.use('/',fileRouter)
+// app.use('/',async(req,res)=>{
+//   res.json({message:'api working!'})
+// })
 app.listen(process.env.PORT,()=>{
     console.log(`server running on port : ${process.env.PORT}`)
 })
